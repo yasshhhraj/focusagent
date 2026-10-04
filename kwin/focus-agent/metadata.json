@@ -1,0 +1,14 @@
+{
+  "KPlugin": {
+    "Name": "Focus Agent Activity Bridge",
+    "Description": "Reports active applications to the local Focus Agent runtime",
+    "Icon": "preferences-system-windows",
+    "Authors": [{ "Name": "Yashraj Jangir" }],
+    "Id": "focus-agent-activity",
+    "Version": "0.1.0",
+    "License": "MIT"
+  },
+  "X-Plasma-API": "javascript",
+  "X-Plasma-MainScript": "code/main.js",
+  "KPackageStructure": "KWin/Script"
+}
