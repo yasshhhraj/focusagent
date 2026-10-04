@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "concurrently -k \"vite\" \"wait-on tcp:1420 && electron .\"",
     "build": "tsc && vite build",
+    "test": "node --test electron/*.test.mjs",
     "preview": "vite preview",
     "start": "electron ."
   },

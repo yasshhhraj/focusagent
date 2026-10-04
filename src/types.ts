@@ -12,9 +12,12 @@ export interface ActivityState {
   application: string;
   since: string;
   durationMinutes: number;
-  classification: "focus" | "related" | "break" | "possible_drift" | "unknown";
+  classification: "focus" | "related" | "neutral" | "distraction" | "break" | "possible_drift" | "unknown";
   confidence: number;
   activeTaskId: number | null;
+  sessionId: number | null;
+  reasoningSource: "user" | "gemma" | "deterministic";
+  trajectory: string;
 }
 
 export interface DashboardState {
@@ -24,5 +27,32 @@ export interface DashboardState {
   relatedMinutes: number;
   breakMinutes: number;
   monitoringPaused: boolean;
+  monitoringPauseMode: "timed" | "indefinite" | null;
+  monitoringPauseUntil: string | null;
   modelAvailable: boolean;
+  modelName: string | null;
+  planSource: string;
+  lastReasoning: {
+    source: string;
+    model: string | null;
+    latencyMs: number | null;
+    status: string;
+    createdAt: string;
+  } | null;
+}
+
+export interface InterventionState {
+  id: number;
+  sessionId: number;
+  level: number;
+  createdAt: string;
+  taskId: number;
+  taskTitle: string;
+  application: string;
+  durationMinutes: number;
+  message: string;
+  reasoningSource: string;
+  reasoningModel: string | null;
+  reasoningReason: string | null;
+  stats: Pick<DashboardState, "focusedMinutes" | "relatedMinutes" | "breakMinutes">;
 }
