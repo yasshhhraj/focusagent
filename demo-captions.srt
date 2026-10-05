@@ -1,0 +1,71 @@
+1
+00:00:00,000 --> 00:00:04,200
+Focus Agent keeps Raj's current priority visible.
+
+2
+00:00:04,200 --> 00:00:13,500
+Built for Raj. Private by design.
+Personal activity stays on the computer.
+
+3
+00:00:13,500 --> 00:00:27,000
+One dashboard shows intention, activity,
+confidence, and essential statistics.
+
+4
+00:00:27,000 --> 00:00:37,000
+Pause monitoring from 15 minutes to 4 hours,
+or until Raj chooses to resume.
+
+5
+00:00:37,000 --> 00:00:48,000
+Raj stays in control.
+Monitoring resumes only when requested.
+
+6
+00:00:48,000 --> 00:01:01,000
+Natural-language goals become priorities
+using local Gemma through Ollama.
+
+7
+00:01:01,000 --> 00:01:12,000
+As the day changes, Raj can switch
+the active priority instantly.
+
+8
+00:01:12,000 --> 00:01:23,000
+Progress is confirmed by Raj—not guessed
+from time spent in an application.
+
+9
+00:01:23,000 --> 00:01:34,500
+“Still related” teaches Focus Agent
+the correct task-and-app relationship.
+
+10
+00:01:34,500 --> 00:01:40,500
+Interventions begin with a gentle focus check.
+
+11
+00:01:40,500 --> 00:01:46,000
+Repeated ignored drift makes the next check stronger.
+
+12
+00:01:46,000 --> 00:01:58,000
+The full intervention shows the priority,
+activity, duration, and daily statistics.
+
+13
+00:01:58,000 --> 00:02:07,000
+Gemma's reasoning is inspectable.
+Deterministic policy controls every interruption.
+
+14
+00:02:07,000 --> 00:02:15,000
+Choose: return, correct, take a break,
+switch tasks, or pause monitoring.
+
+15
+00:02:15,000 --> 00:02:20,700
+Open-weight AI at the core.
+Private, local, and always user-controlled.
