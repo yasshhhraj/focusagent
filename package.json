@@ -1,15 +1,19 @@
 {
   "name": "focus-agent",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.0-rc.1",
   "type": "module",
+  "description": "A local-first AI focus companion for KDE Plasma",
+  "author": { "name": "Yashraj Jangir" },
+  "desktopName": "focus-agent",
   "main": "electron/main.mjs",
   "scripts": {
     "dev": "concurrently -k \"vite\" \"wait-on tcp:1420 && electron .\"",
     "build": "tsc && vite build",
     "test": "node --test electron/*.test.mjs",
     "preview": "vite preview",
-    "start": "electron ."
+    "start": "electron .",
+    "package:linux": "npm run build && electron-builder --linux AppImage"
   },
   "dependencies": {
     "dbus-next": "^0.10.2",
@@ -24,11 +28,34 @@
     "@vitejs/plugin-react": "^5.0.0",
     "concurrently": "^9.2.1",
     "electron": "^44.5.1",
+    "electron-builder": "^26.0.12",
     "typescript": "^5.9.0",
     "vite": "^7.1.0",
     "wait-on": "^8.0.4"
   },
   "overrides": {
     "xml2js": "^0.6.2"
+  },
+  "build": {
+    "appId": "dev.yashraj.focusagent",
+    "productName": "Focus Agent",
+    "asar": true,
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "linux": {
+      "synopsis": "A local-first AI focus companion",
+      "description": "Private desktop activity tracking and local Gemma reasoning for KDE Plasma.",
+      "category": "Utility",
+      "target": [
+        { "target": "AppImage", "arch": ["x64"] }
+      ],
+      "artifactName": "Focus-Agent-${version}-${arch}.${ext}"
+    }
   }
 }
